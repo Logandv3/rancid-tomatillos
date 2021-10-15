@@ -3,12 +3,17 @@ import Header from "./Header";
 import Feature from "./Feature";
 import Detail from "./Detail";
 import Movies from "./Movies";
+import movieData from './movieDetails.js';
 import "./App.css";
+//Bei's comment dkfjskdlfjskdjfskjfsdkfjdsklfj
 
 class App extends Component {
-  // constructor() {
-  //   super()
-  // }
+  constructor() {
+    super()
+    this.state = {
+      allMovies: movieData.movies 
+    }
+  }
 
   render() {
     return (
@@ -16,7 +21,7 @@ class App extends Component {
         <Header />
         <Feature />
         <Detail />
-        <Movies />
+        <Movies allMovies={this.state.allMovies}/>
       </div>
     );
   }
