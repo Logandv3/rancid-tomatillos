@@ -4,6 +4,7 @@ import Feature from "./Feature";
 import Detail from "./Detail";
 import Movies from "./Movies";
 import "./App.css";
+//Bei's comment dkfjskdlfjskdjfskjfsdkfjdsklfj
 
 class App extends Component {
   // constructor() {
