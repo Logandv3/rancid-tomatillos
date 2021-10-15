@@ -1,0 +1,9 @@
+header {
+  display: grid;
+  grid-template-columns: 60% 1fr 1fr 1fr;
+}
+
+.header-link {
+  text-decoration: none;
+  color: white;
+}
