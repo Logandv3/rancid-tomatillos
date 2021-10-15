@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import Header from "./Header";
+import Feature from "./Feature";
+import Detail from "./Detail";
+import Movies from "./Movies";
 import "./App.css";
 
 class App extends Component {
@@ -11,6 +14,9 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
+        <Feature />
+        <Detail />
+        <Movies />
       </div>
     );
   }
