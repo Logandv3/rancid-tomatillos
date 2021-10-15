@@ -11,17 +11,23 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      allMovies: movieData.movies 
+      allMovies: movieData.movies,
+      movieIdClicked:null
     }
   }
+  handleClick = (e)=>{
+    console.log(e.target)
+    
 
+      return this.setState({movieIdClicked: true})
+  }
   render() {
     return (
       <div className="App">
         <Header />
-        <Feature />
-        <Detail />
-        <Movies allMovies={this.state.allMovies}/>
+        {!this.state.movieIdClicked && <Feature />}
+        {this.state.movieIdClicked && <Detail />}
+        {!this.state.movieIdClicked && <Movies allMovies={this.state.allMovies} handleClick={this.handleClick}/>}
       </div>
     );
   }

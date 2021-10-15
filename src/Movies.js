@@ -6,7 +6,7 @@ class Movies extends Component {
 
   render() {
     const movieCards = this.props.allMovies.map(movie => {
-      return (<Card key={movie.id} backdrop={movie.backdrop_path} title={movie.title} rating={movie.average_rating.toFixed(1)} />)
+      return (<Card key={movie.id} backdrop={movie.backdrop_path} title={movie.title} rating={movie.average_rating.toFixed(1)} handleClick={this.props.handleClick}/>)
     })
     return (
       <section className="movies-container">
