@@ -4,8 +4,15 @@
 
 .view-title {
   color: white;
+  font-size:3rem;
+  text-align: center;
+  border-top: 2px solid salmon;
 }
 
 .card-holder {
   background-color: lightcyan;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 1.5rem;
+  
 }
