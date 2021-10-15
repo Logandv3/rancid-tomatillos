@@ -1,20 +1,23 @@
-## Description
+## What (if any) new features are you implementing?
 
-Please include a summary of the change and/or functionality implementation:
+N/A
 
+## What (if any) refactoring did you do?
 
-## Type of change
+N/A
 
-Please delete options that are not relevant.
+## Were there any issues that arose?
 
-- [] Bug fix (non-breaking change which fixes an issue)
-- [] New feature (non-breaking change which adds functionality)
-- [] Refactoring
+N/A
+
+## What (if any) bugs did you fix?
+
+N/A
 
 ## How Has This Been Tested?
 Please describe the tests that you ran to verify your changes. Provide instructions so we can reproduce. Please also list any relevant details for your test configuration
 
-- [] open index.html
+- [] run locally/ browser
 - [] dev tools
 - [] terminal
 
@@ -24,4 +27,4 @@ Please describe the tests that you ran to verify your changes. Provide instructi
 - [] No console error messages
 
 ## Additional info
-Please include any other relevant information here:
+
