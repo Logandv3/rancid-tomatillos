@@ -16,7 +16,7 @@ class Card extends Component {
           className="card-backdrop"
           src={this.props.backdrop}
           alt="movie backdrop"
-          onClick={event => this.props.handleClick(event)}
+          onClick={event => this.props.showDetails(event)}
         />
         <div className="card-info">
           <p className="card-title">{this.props.title}</p>

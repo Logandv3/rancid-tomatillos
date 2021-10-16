@@ -12,14 +12,13 @@ class Movies extends Component {
           backdrop={movie.backdrop_path}
           title={movie.title}
           rating={movie.average_rating.toFixed(1)}
-          handleClick={this.props.handleClick}
+          showDetails={this.props.showDetails}
         />
       );
     });
     return (
       <section className="movies-container">
         <h3 className="view-title">All Movies</h3>
-        {/* <Card className="movie-card" /> */}
         <div className="card-holder"> {movieCards}</div>
       </section>
     );

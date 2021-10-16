@@ -15,7 +15,12 @@ class App extends Component {
       movieClicked: null,
     };
   }
-  handleClick = e => {
+
+  backToHome = () => {
+    return this.setState({ movieClicked: null });
+  };
+
+  showDetails = e => {
     const forcedTarget = e.target.tagName === "ARTICLE" ? e.target : e.target.parentNode;
     const clickedId = parseInt(forcedTarget.id);
     const movieClicked = movieData.movies.find(movie => movie.id === clickedId);
@@ -27,8 +32,8 @@ class App extends Component {
       <div className="App">
         <Header />
         {!this.state.movieClicked && <Feature />}
-        {this.state.movieClicked && <Detail movieClicked={this.state.movieClicked} />}
-        {!this.state.movieClicked && <Movies allMovies={this.state.allMovies} handleClick={this.handleClick} />}
+        {this.state.movieClicked && <Detail movieClicked={this.state.movieClicked} backToHome={this.backToHome} />}
+        {!this.state.movieClicked && <Movies allMovies={this.state.allMovies} showDetails={this.showDetails} />}
       </div>
     );
   }
