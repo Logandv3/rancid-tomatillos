@@ -22,6 +22,7 @@ class App extends Component {
       .then(data => this.setState({ allMovies: data.movies }))
       .catch(error => console.log(error));
   }
+
   backToHome = () => {
     return this.setState({ movieClicked: null });
   };
@@ -29,8 +30,12 @@ class App extends Component {
   showDetails = e => {
     const forcedTarget = e.target.tagName === "ARTICLE" ? e.target : e.target.parentNode;
     const clickedId = parseInt(forcedTarget.id);
-    const movieClicked = this.state.allMovies.find(movie => movie.id === clickedId);
-    return this.setState({ movieClicked: movieClicked });
+    // const movieClicked = this.state.allMovies.find(movie => movie.id === clickedId);
+    fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${clickedId}`)
+      .then(response => response.json())
+      .then(data => this.setState({ movieClicked: data.movie }))
+      .catch(error => console.log(error));
+    // return this.setState({ movieClicked: movieClicked });
   };
 
   render() {
