@@ -17,7 +17,9 @@ class Detail extends Component {
           <div className="detail-info">
             <h1 className="info-title">{this.props.movieClicked.title}</h1>
             <p className="release-date">{this.props.movieClicked.release_date}</p>
-            <p className="description">Some dummy description</p>
+            <p className="runtime">Runtime:{this.props.movieClicked.runtime} minutes</p>
+            <p className="revenue">Box Office: ${this.props.movieClicked.revenue.toLocaleString("en-US")} US dollars</p>
+            <p className="description">{this.props.movieClicked.overview}</p>
           </div>
           <div className="button-container">
             <button type="button" name="addToFavorites">
