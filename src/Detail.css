@@ -1,4 +1,26 @@
 .detail-view {
-  /* display: none; */
   background-color: skyblue;
+}
+
+.detail-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.poster-img {
+  width: 200px;
+  height: 300px;
+}
+
+.info-title {
+  font-size: 2.5rem;
+}
+
+.release-date {
+  font-size: 1rem;
+}
+
+.description {
+  font-size: 1.3rem;
 }
