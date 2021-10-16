@@ -3,7 +3,7 @@ import Header from "./Header";
 import Feature from "./Feature";
 import Detail from "./Detail";
 import Movies from "./Movies";
-import movieData from "./movieDetails.js";
+// import movieData from "./movieDetails.js";
 import "./App.css";
 //Bei's comment dkfjskdlfjskdjfskjfsdkfjdsklfj
 
@@ -11,11 +11,17 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      allMovies: movieData.movies,
+      allMovies: [],
       movieClicked: null,
     };
   }
 
+  componentDidMount() {
+    fetch("https://rancid-tomatillos.herokuapp.com/api/v2/movies")
+      .then(response => response.json())
+      .then(data => this.setState({ allMovies: data.movies }))
+      .catch(error => console.log(error));
+  }
   backToHome = () => {
     return this.setState({ movieClicked: null });
   };
@@ -23,7 +29,7 @@ class App extends Component {
   showDetails = e => {
     const forcedTarget = e.target.tagName === "ARTICLE" ? e.target : e.target.parentNode;
     const clickedId = parseInt(forcedTarget.id);
-    const movieClicked = movieData.movies.find(movie => movie.id === clickedId);
+    const movieClicked = this.state.allMovies.find(movie => movie.id === clickedId);
     return this.setState({ movieClicked: movieClicked });
   };
 
