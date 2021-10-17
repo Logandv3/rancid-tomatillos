@@ -11,7 +11,7 @@ class Card extends Component {
 
   render() {
     return (
-      <article id={this.props.id}>
+      <article className="card-container" id={this.props.id}>
         <img
           className="card-backdrop"
           src={this.props.backdrop}
@@ -21,7 +21,7 @@ class Card extends Component {
         <div className="card-info">
           <p className="card-title">{this.props.title}</p>
           <p className="card-rating">{this.props.rating}</p>
-        </div>
+        </div> 
       </article>
     );
   }
