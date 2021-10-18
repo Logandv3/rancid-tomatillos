@@ -1,5 +1,6 @@
 header {
   display: grid;
+  align-items: center;
   grid-template-columns: 60% 1fr 1fr 1fr;
 }
 
