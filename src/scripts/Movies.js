@@ -7,10 +7,9 @@ class Movies extends Component {
   render() {
     const movieCards = this.props.allMovies.map(movie => {
       return (
-        <Link to={`/${movie.id}`}>
+        <Link to={`/${movie.id}`} key={movie.id}>
           <Card
-            key={movie.id}
-            id={movie.id}
+            // id={movie.id}
             backdrop={movie.backdrop_path}
             title={movie.title}
             rating={movie.average_rating.toFixed(1)}
