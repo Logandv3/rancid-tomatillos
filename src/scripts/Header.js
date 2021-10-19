@@ -5,7 +5,7 @@ class Header extends Component {
   render() {
     return (
       <header>
-        <h2> Rancid Tomatillos </h2>
+        <h2 className="rancid-tomatillos"> Rancid Tomatillos </h2>
         <a
           className="header-link"
           href="https://frontend.turing.edu/projects/module-3/rancid-tomatillos-v3.html"

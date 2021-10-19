@@ -1,6 +1,12 @@
 header {
   display: grid;
+  align-items: center;
   grid-template-columns: 60% 1fr 1fr 1fr;
+}
+
+.rancid-tomatillos {
+  font-size: 3rem;
+  color: crimson;
 }
 
 .header-link {
