@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import "./Detail.css";
-import movieData from "./movieDetails";
+import "../styles/Detail.css";
+// import movieData from "./movieDetails";
 
 class Detail extends Component {
   render() {

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./Card.css";
+import "../styles/Card.css";
 
 class Card extends Component {
   // When we click on a specific card, we should be taken to
@@ -16,7 +16,7 @@ class Card extends Component {
           className="card-backdrop"
           src={this.props.backdrop}
           alt="movie backdrop"
-          onClick={event => this.props.showDetails(event)}
+          // onClick={event => this.props.showDetails(event)}
         />
         <div className="card-info">
           <p className="card-title">{this.props.title}</p>
