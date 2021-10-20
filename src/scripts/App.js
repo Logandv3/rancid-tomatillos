@@ -4,8 +4,8 @@ import Feature from "./Feature";
 import Detail from "./Detail";
 import Movies from "./Movies";
 // import movieData from "./movieDetails.js";
-import "./App.css";
-//Bei's comment dkfjskdlfjskdjfskjfsdkfjdsklfj
+import "../styles/App.css";
+import { Route } from "react-router-dom";
 
 class App extends Component {
   constructor() {
@@ -23,28 +23,41 @@ class App extends Component {
       .catch(error => console.log(error));
   }
 
-  backToHome = () => {
-    return this.setState({ movieClicked: null });
-  };
+  // backToHome = () => {
+  //   return this.setState({ movieClicked: null });
+  // };
 
-  showDetails = e => {
-    const forcedTarget = e.target.tagName === "ARTICLE" ? e.target : e.target.parentNode;
-    const clickedId = parseInt(forcedTarget.id);
-    // const movieClicked = this.state.allMovies.find(movie => movie.id === clickedId);
-    fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${clickedId}`)
-      .then(response => response.json())
-      .then(data => this.setState({ movieClicked: data.movie }))
-      .catch(error => console.log(error));
-    // return this.setState({ movieClicked: movieClicked });
-  };
+  // showDetails = e => {
+  //   const forcedTarget = e.target.tagName === "ARTICLE" ? e.target : e.target.parentNode;
+  //   const clickedId = parseInt(forcedTarget.id);
+  //   // const movieClicked = this.state.allMovies.find(movie => movie.id === clickedId);
+  //   // return this.setState({ movieClicked: movieClicked });
+  // };
 
   render() {
     return (
       <div className="App">
         <Header />
-        {!this.state.movieClicked && <Feature />}
-        {this.state.movieClicked && <Detail movieClicked={this.state.movieClicked} backToHome={this.backToHome} />}
-        {!this.state.movieClicked && <Movies allMovies={this.state.allMovies} showDetails={this.showDetails} />}
+        <Route
+          exact
+          path="/"
+          render={() => {
+            return (
+              <main>
+                <Feature />
+                <Movies allMovies={this.state.allMovies} />
+              </main>
+            );
+          }}
+        />
+        <Route
+          exact
+          path="/:movieId"
+          render={({ match }) => {
+            return <Detail clickedId={match.params.movieId} />;
+          }}
+        />
+        ;
       </div>
     );
   }
