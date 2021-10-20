@@ -5,8 +5,7 @@ import Detail from "./Detail";
 import Movies from "./Movies";
 // import movieData from "./movieDetails.js";
 import "../styles/App.css";
-import { Route } from 'react-router-dom';
-
+import { Route } from "react-router-dom";
 
 class App extends Component {
   constructor() {
@@ -39,18 +38,26 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <Feature />
-        <Movies allMovies={this.state.allMovies}/>
-       
-
-        {/* <Route exact path="/:movieId" render={({match})=>{
-          const clickedId= parseInt(match.params.movieId)
-          return fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${clickedId}`).then(response => response.json()).then(data => <Detail {...data.movie}/> )
-          console.log("match", match)
-          console.log("clickedMovie",);
-         }}
-        /> */}
-        <Route exact path="/:movieId" render={({match}) => <Detail clickedId={match.params.movieId} />} />
+        <Route
+          exact
+          path="/"
+          render={() => {
+            return (
+              <main>
+                <Feature />
+                <Movies allMovies={this.state.allMovies} />
+              </main>
+            );
+          }}
+        />
+        <Route
+          exact
+          path="/:movieId"
+          render={({ match }) => {
+            return <Detail clickedId={match.params.movieId} />;
+          }}
+        />
+        ;
       </div>
     );
   }
