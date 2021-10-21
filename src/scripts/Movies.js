@@ -4,6 +4,7 @@ import "../styles/Movies.css";
 import { Link } from "react-router-dom";
 
 class Movies extends Component {
+
   render() {
     const movieCards = this.props.allMovies.map(movie => {
       return (
