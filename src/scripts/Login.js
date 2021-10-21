@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import "../styles/Login.css";
+import { Link } from 'react-router-dom';
 
 class Login extends Component {
 
 
   render() {
     return(
-      <form>
+      <form className="login-form">
         <h2>Welcome to Rancid Tomatillos</h2>
         <input type="text" placeholder="Please Enter Username" />
         <input type="password" placeholder="Enter Password" />
@@ -16,4 +17,4 @@ class Login extends Component {
   }
 }
 
-export default Login;
+export default Login

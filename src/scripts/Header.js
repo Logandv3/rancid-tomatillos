@@ -1,7 +1,9 @@
 import React, { Component } from "react";
+import { NavLink } from "react-router-dom";
 import "../styles/Header.css";
 
 class Header extends Component {
+ 
   render() {
     return (
       <header>
@@ -22,6 +24,9 @@ class Header extends Component {
         >
           My Favorites
         </a>
+        <NavLink to="/login">
+          <p>Login</p>
+        </NavLink>
         <button>Search Movies</button>
       </header>
     );
