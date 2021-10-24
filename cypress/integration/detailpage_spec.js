@@ -18,4 +18,8 @@ describe('Detail Page', () => {
     .contains('Average Rating:5.3')
   });
 
-})
+  it('The user should be able to return to the home page when the go back button is clicked', () => {
+    cy.get('.back-to-home').click()
+    cy.url().should('equal', 'http://localhost:3000/')
+  });
+});
