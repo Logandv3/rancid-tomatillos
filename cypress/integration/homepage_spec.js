@@ -3,7 +3,11 @@
 describe('Homepage', () => {
 
   beforeEach (() => {
-    cy.visit("http://localhost:3000");
+    cy.fixture('allMovies.json').as('allMovies')
+    cy.intercept('GET', 'https://rancid-tomatillos.herokuapp.com/api/v2/movies', {body: allMovies});
+    // fixture('allMovies.json').as('allMovies')
+
+    cy.visit("http://localhost:3000")
   }); 
 
   it('User should see a header when the page is loaded', () => {
@@ -18,8 +22,7 @@ describe('Homepage', () => {
 
   it('User should see all movies displayed on page when it is loaded', () => {
     cy.get('.card-holder')
-    .children()
-    .should('have.length', 40)
+    .children().should('have.length', 4)
   });
 
   it('As a user, I can click a movie, and see that movie’s details', () => {
