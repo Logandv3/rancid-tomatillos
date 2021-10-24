@@ -1,6 +1,10 @@
 describe('Detail Page', () => {
   
   beforeEach (() => {
+    cy.fixture('singleMovie.json').then((singleMovie) => {
+      cy.intercept('GET', 'https://rancid-tomatillos.herokuapp.com/api/v2/movies/337401', {body: singleMovie})
+    });
+
     cy.visit("http://localhost:3000/337401");
   });
 
@@ -14,4 +18,8 @@ describe('Detail Page', () => {
     .contains('Average Rating:5.3')
   });
 
-})
+  it('The user should be able to return to the home page when the go back button is clicked', () => {
+    cy.get('.back-to-home').click()
+    cy.url().should('equal', 'http://localhost:3000/')
+  });
+});

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "../styles/Detail.css";
 
 class Detail extends Component {
@@ -6,23 +7,39 @@ class Detail extends Component {
     super();
     this.state = {
       clickedMovie: null,
+      errorMsg: ""
     };
   }
   componentDidMount() {
     fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${this.props.clickedId}`)
-      .then(response => response.json())
-      .then(data => this.setState({ clickedMovie: data.movie }))
-      .catch(error => console.log(error));
+      .then(response => { 
+        if (response.status >= 500) {
+          throw ('Network or Server Could Not Be Reached')
+
+        } else if (response.status >= 400) {
+          throw ('Please Enter a Proper URL')
+          
+        } else if (response.status >= 300) {
+          throw ('You Have Been Redirected')
+
+        } else {
+          return response.json()
+        }
+        })
+        .then(data => this.setState({ clickedMovie: data.movie }))
+        .catch(error => this.setState({ errorMsg: error }))
   }
 
   render() {
     return (
-      this.state.clickedMovie && (
+      this.state.errorMsg ? <h1 className="error-msg">{this.state.errorMsg}</h1> :
+      (this.state.clickedMovie && (
         <section className="detail-view">
-          <h1>{this.props.clickedId}</h1>
-          <button type="button" name="backToHome">
+        <Link to="/">
+          <button type="button" name="backToHome" className="back-to-home">
             Go back to homepage
           </button>
+        </Link>
           <div className="detail-wrapper">
             <div className="poster-container">
               <img
@@ -51,7 +68,7 @@ class Detail extends Component {
             </div>
           </div>
         </section>
-      )
+      ))
     );
   }
 }
