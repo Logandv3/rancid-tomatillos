@@ -1,6 +1,10 @@
 describe('Detail Page', () => {
   
   beforeEach (() => {
+    cy.fixture('singleMovie.json').then((singleMovie) => {
+      cy.intercept('GET', 'https://rancid-tomatillos.herokuapp.com/api/v2/movies/337401', {body: singleMovie})
+    });
+
     cy.visit("http://localhost:3000/337401");
   });
 

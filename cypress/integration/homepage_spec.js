@@ -3,9 +3,9 @@
 describe('Homepage', () => {
 
   beforeEach (() => {
-    cy.fixture('allMovies.json').as('allMovies')
-    cy.intercept('GET', 'https://rancid-tomatillos.herokuapp.com/api/v2/movies', {body: allMovies});
-    // fixture('allMovies.json').as('allMovies')
+    cy.fixture('allMovies.json').then((allMovies) => {
+      cy.intercept('GET', 'https://rancid-tomatillos.herokuapp.com/api/v2/movies', {body: allMovies});
+    });
 
     cy.visit("http://localhost:3000")
   }); 
