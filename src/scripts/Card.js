@@ -1,14 +1,7 @@
-import React, { Component } from "react";
-import "../styles/Card.css";
+import React, { Component } from "react"
+import "../styles/Card.css"
 
 class Card extends Component {
-  // When we click on a specific card, we should be taken to
-  // a view with more details on that movie.
-
-  //When click happens, movie cards and feature post will be hidden, movie detail will show
-
-  // Need to find a place that can control the display of all three components
-
   render() {
     return (
       <article className="card-container" id={this.props.id}>
@@ -21,10 +14,10 @@ class Card extends Component {
         <div className="card-info">
           <p className="card-title">{this.props.title}</p>
           <p className="card-rating">{this.props.rating}</p>
-        </div> 
+        </div>
       </article>
-    );
+    )
   }
 }
 
-export default Card;
+export default Card
