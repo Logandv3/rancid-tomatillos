@@ -10,11 +10,9 @@ class Movies extends Component {
       return (
         <Link to={`/${movie.id}`} key={movie.id}>
           <Card
-            // id={movie.id}
             backdrop={movie.backdrop_path}
             title={movie.title}
             rating={movie.average_rating.toFixed(1)}
-            // showDetails={this.props.showDetails}
           />
         </Link>
       );
