@@ -1,9 +1,12 @@
 .feature {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: pink;
-  height: 35%;
+  height: 100%;
+  width: 40%;
+  margin: 8%;
 }
 
 

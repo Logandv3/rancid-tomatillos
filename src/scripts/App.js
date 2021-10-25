@@ -45,9 +45,13 @@ class App extends Component {
           path="/"
           render={() => {
             return (
-              <main>
-                <Header />
-                <Feature />
+              <main className="main">
+                <div className="header-container">
+                  <Header />
+                </div>
+                {/* <div> */}
+                  <Feature />
+                {/* </div> */}
                 <Movies allMovies={this.state.allMovies} />
               </main>
             );
