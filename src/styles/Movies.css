@@ -19,6 +19,5 @@
   background-color: #282c34;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  /* grid-template-rows: repeat(autofill, 0.6fr); */
   gap: 1.5rem;
 }
