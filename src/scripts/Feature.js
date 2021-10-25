@@ -3,7 +3,11 @@ import "../styles/Feature.css";
 
 class Feature extends Component {
   render() {
-    return <div className="feature">Featured movie poster here</div>;
+    return (
+    <div className="feature">
+      <h1>Featured Movie Poster</h1>
+    </div>
+    )
   }
 }
 

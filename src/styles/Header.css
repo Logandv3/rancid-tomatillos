@@ -1,15 +1,36 @@
+.header-container {
+  width: 100%;
+}
+
 header {
   display: grid;
   align-items: center;
-  grid-template-columns: 60% 1fr 1fr 1fr;
+  justify-content: center;
+  text-align: center;
+  grid-template-columns: 60% 1fr 1fr 0.9fr 1.5fr;
 }
 
 .rancid-tomatillos {
   font-size: 3rem;
   color: crimson;
+  text-align: start;
 }
 
-.header-link {
+.header-link, 
+.login-link {
   text-decoration: none;
   color: white;
+}
+
+.header-link:hover, 
+.login-link:hover {
+  text-decoration: underline;
+  color: crimson;
+}
+
+.search-bar {
+  border-radius: 1em;
+  background-color: rgba(255, 255, 255, 0.096);
+  height: 45%;
+  width: 100%;
 }
