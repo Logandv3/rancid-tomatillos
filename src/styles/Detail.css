@@ -1,5 +1,14 @@
 .detail-view {
-  background-color: skyblue;
+  background-color: #282c34;
+}
+
+.back-to-home {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  background-color: #282c34;
+  border: 2px solid gray;
+  padding: 0.5rem 1rem;
 }
 
 .detail-wrapper {
@@ -8,19 +17,56 @@
   justify-content: space-between;
 }
 
+.poster-container {
+  margin-right: 3%;
+}
+
+.poster-rating {
+  text-align: center;
+}
+
+.detail-info {
+  width: 60%;
+  margin-right: 3%;
+}
+
 .poster-img {
   width: 200px;
   height: 300px;
+  margin-bottom: 1rem;
 }
 
 .info-title {
   font-size: 2.5rem;
+  color: crimson;
+  transform: translateY(-20%);
 }
 
-.release-date {
-  font-size: 1rem;
+.release-date,
+.runtime,
+.revenue {
+  font-size: 0.8rem;
+  margin-bottom: 2px;
 }
 
 .description {
-  font-size: 1.3rem;
+  margin-top: 5%;
+  font-size: 1rem;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.addToFavorites,
+.addToWatchList {
+  width: 135px;
+  height: 37px;
+  margin-bottom: 5%;
+  color: #fff;
+  background-color: #282c34;
+  border: 2px solid gray;
+  padding: 0.5rem auto;
 }

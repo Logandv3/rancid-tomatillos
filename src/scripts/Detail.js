@@ -1,45 +1,43 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import "../styles/Detail.css";
+import React, { Component } from "react"
+import { Link } from "react-router-dom"
+import "../styles/Detail.css"
 
 class Detail extends Component {
   constructor() {
-    super();
+    super()
     this.state = {
       clickedMovie: null,
-      errorMsg: ""
-    };
+      errorMsg: "",
+    }
   }
   componentDidMount() {
     fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${this.props.clickedId}`)
-      .then(response => { 
+      .then(response => {
         if (response.status >= 500) {
-          throw ('Network or Server Could Not Be Reached')
-
+          throw "Network or Server Could Not Be Reached"
         } else if (response.status >= 400) {
-          throw ('Please Enter a Proper URL')
-          
+          throw "Please Enter a Proper URL"
         } else if (response.status >= 300) {
-          throw ('You Have Been Redirected')
-
+          throw "You Have Been Redirected"
         } else {
           return response.json()
         }
-        })
-        .then(data => this.setState({ clickedMovie: data.movie }))
-        .catch(error => this.setState({ errorMsg: error }))
+      })
+      .then(data => this.setState({ clickedMovie: data.movie }))
+      .catch(error => this.setState({ errorMsg: error }))
   }
 
   render() {
-    return (
-      this.state.errorMsg ? <h1 className="error-msg">{this.state.errorMsg}</h1> :
-      (this.state.clickedMovie && (
+    return this.state.errorMsg ? (
+      <h1 className="error-msg">{this.state.errorMsg}</h1>
+    ) : (
+      this.state.clickedMovie && (
         <section className="detail-view">
-        <Link to="/">
-          <button type="button" name="backToHome" className="back-to-home">
-            Go back to homepage
-          </button>
-        </Link>
+          <Link to="/">
+            <button type="button" name="backToHome" className="back-to-home">
+              Go back to homepage
+            </button>
+          </Link>
           <div className="detail-wrapper">
             <div className="poster-container">
               <img
@@ -51,26 +49,26 @@ class Detail extends Component {
             </div>
             <div className="detail-info">
               <h1 className="info-title">{this.state.clickedMovie.title}</h1>
-              <p className="release-date">{this.state.clickedMovie.release_date}</p>
-              <p className="runtime">Runtime:{this.state.clickedMovie.runtime} minutes</p>
+              <p className="release-date">Release Date: {this.state.clickedMovie.release_date}</p>
+              <p className="runtime">Runtime: {this.state.clickedMovie.runtime} minutes</p>
               <p className="revenue">
                 Box Office: ${this.state.clickedMovie.revenue.toLocaleString("en-US")} US dollars
               </p>
               <p className="description">{this.state.clickedMovie.overview}</p>
             </div>
             <div className="button-container">
-              <button type="button" name="addToFavorites">
+              <button type="button" className="addToFavorites">
                 Add to Favorites
               </button>
-              <button type="button" name="addToWatchList">
+              <button type="button" className="addToWatchList">
                 Add to Watch List
               </button>
             </div>
           </div>
         </section>
-      ))
-    );
+      )
+    )
   }
 }
 
-export default Detail;
+export default Detail
