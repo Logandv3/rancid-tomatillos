@@ -37,15 +37,29 @@ N/A
 
 ## Project Overview
 
-- Rancid Tomatillos is an app that allows users to view all movies as well as their individual details.
+- Rancid Tomatillos is an app that allows users to view all movies as well as their individual details
 
 
 ## Learning Goals
 
+Team Goals:
 - Gain competency with React fundamentals
 - Learn how to test React components & asynchronous JS
 - Practice refactoring
 - Create a multi-page UX using Router
+---
+Bei:
+-
+---
+Logan:
+- Navigate between page views without show and hide fcns
+- Use Express to allow the user to find movies and save them
+- Gain a better understanding of Cypress testing and fetch errors
+
+
+## Evolution of Rancid Tomatillos
+
+We started off with a design and component architecture that we really liked.  Following our diagram and wireframe we were able to build our components
 
 
 ## How to Use
@@ -78,11 +92,12 @@ N/A
 
 ## Reflections
 
-- React makes a lot of things easier like the UI and can be nice for organizing data and managing state.  This was a good first project and we look forward to       doing more projects with React.
+- React makes a lot of things easier like the UI management and it can be nice for organizing data and managing state.  This was a good first project and we look   forward to doing more projects with React.
 
 
 ## Future Plans
 
+- We would like to refactor our components so we don't have unecessary class components.  Most of our component should be fcns.
 - Finish the login page so the user has more options.
 - Implement Express.js server functionality to allow the user to search, rate and save movies.
 - We would like to allow the user to view a movies trailer video on the movie detail page.
