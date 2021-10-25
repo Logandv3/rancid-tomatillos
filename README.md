@@ -60,7 +60,8 @@ Logan:
 
 ## Evolution of Rancid Tomatillos
 
-We started off with a design and component architecture that we really liked.  Following our diagram and wireframe we were able to build our components
+We started off with a design and component architecture that we really liked.  Following our diagram and wireframe we were able to build our components easily.
+We set up our all components as classes and we realized part way through that most should just be fcns.  We decided to come back and change them later, but we ran out of time because we wanted to spend more time learning Cypress in greater depth.  We initially had all of our state data in our main App component, but when we implemented Router we stored some state in our Details component to get it to work.  When we tested with Cypress there was definitely a learning curve, especially with stubbing.  We had plans to use Express for more functionality but we decided our time would be better spent learning and implementing better tests.  There are still a few things we would like to implement but we are happy with how much we learned. 
 
 
 ## How to Use
