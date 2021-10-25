@@ -49,12 +49,13 @@ Team Goals:
 - Create a multi-page UX using Router
 ---
 Bei:
--
----
+- goals
+
 Logan:
 - Navigate between page views without show and hide fcns
 - Use Express to allow the user to find movies and save them
 - Gain a better understanding of Cypress testing and fetch errors
+---
 
 
 ## Evolution of Rancid Tomatillos
