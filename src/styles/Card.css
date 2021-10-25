@@ -5,6 +5,8 @@
 .card-backdrop {
   width: 100%;
   height: 85%;
+  border-radius: 7px;
+  border: thin solid rgba(255, 255, 255, 0.424);
 }
 
 .card-info {
@@ -12,15 +14,16 @@
   flex-direction: row;
   justify-content: space-between;
   position: absolute;
-  bottom: 15%;
+  bottom: 1%;
   background-color: rgba(0, 0, 0, 0.308);
   width: 100%;
-  /* height: 12%; */
 }
 
 .card-title {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: bold;
+  color: rgb(255, 255, 255);
+  text-shadow: 0.25px 0.25px 0 rgb(0, 98, 255), 0.25px 0.25px 0 rgb(0, 98, 255), 0.25px 0.25px 0 rgb(0, 98, 255), 0.25px 0.25px 0 rgb(0, 98, 255)
 }
 
 .card-rating {

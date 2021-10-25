@@ -24,10 +24,10 @@ class Header extends Component {
         >
           My Favorites
         </a>
-        <NavLink to="/login">
+        <NavLink className="login-link" to="/login">
           <p>Login</p>
         </NavLink>
-        <button>Search Movies</button>
+        <input className="search-bar" type="search" placeholder=" Search for movie"/>
       </header>
     );
   }
