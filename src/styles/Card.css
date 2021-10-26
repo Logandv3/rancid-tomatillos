@@ -5,7 +5,7 @@
 .card-backdrop {
   object-fit: cover;
   display: block;
-  max-height: 200px;
+  max-height: 12.5rem;
   width: 100%;
   height: auto;
   border-radius: 7px;
