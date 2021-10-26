@@ -49,7 +49,8 @@ Team Goals:
 - Create a multi-page UX using Router
 ---
 Bei:
-- goals
+- Understand Cypress and write comprehensive tests
+- Use Express to add microservices to the app like favorites and search.
 
 Logan:
 - Navigate between page views without show and hide fcns
