@@ -1,14 +1,12 @@
-import React, { Component } from "react";
-import "../styles/Feature.css";
+import React from "react"
+import "../styles/Feature.css"
 
-class Feature extends Component {
-  render() {
-    return (
+const Feature = () => {
+  return (
     <div className="feature">
       <h1>Featured Movie Poster</h1>
     </div>
-    )
-  }
+  )
 }
 
-export default Feature;
+export default Feature
