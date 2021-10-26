@@ -5,7 +5,7 @@
 .card-backdrop {
   object-fit: cover;
   display: block;
-  max-height: 12.5rem;
+  max-height: 10em;
   width: 100%;
   height: auto;
   border-radius: 7px;
@@ -17,13 +17,14 @@
   flex-direction: row;
   justify-content: space-between;
   position: absolute;
-  bottom: 1%;
+  bottom: 0%;
   background-color: rgba(0, 0, 0, 0.308);
+  border-radius: 0px 0px 10px 10px;
   width: 100%;
 }
 
 .card-title {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: bold;
   color: rgb(255, 255, 255);
   text-shadow: 0.25px 0.25px 0 rgb(0, 98, 255), 0.25px 0.25px 0 rgb(0, 98, 255), 0.25px 0.25px 0 rgb(0, 98, 255),
@@ -32,6 +33,6 @@
 
 .card-rating {
   color: gold;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: bold;
 }
