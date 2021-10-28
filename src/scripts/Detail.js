@@ -35,7 +35,7 @@ class Detail extends Component {
         <section className="detail-view">
           <Link to="/">
             <button type="button" name="backToHome" className="back-to-home">
-              Go back to homepage
+              Back to homepage
             </button>
           </Link>
           <div className="detail-wrapper">
@@ -45,14 +45,14 @@ class Detail extends Component {
                 src={this.state.clickedMovie.poster_path}
                 alt={this.state.clickedMovie.title}
               />
-              <div className="poster-rating">Average Rating:{this.state.clickedMovie.average_rating.toFixed(1)}</div>
+              <div className="poster-rating">Avg Rating: {this.state.clickedMovie.average_rating.toFixed(1)}</div>
             </div>
             <div className="detail-info">
               <h1 className="info-title">{this.state.clickedMovie.title}</h1>
-              <p className="release-date">Release Date: {this.state.clickedMovie.release_date}</p>
-              <p className="runtime">Runtime: {this.state.clickedMovie.runtime} minutes</p>
-              <p className="revenue">
-                Box Office: ${this.state.clickedMovie.revenue.toLocaleString("en-US")} US dollars
+              <p className="movie-details"><b>Release Date:</b>   {this.state.clickedMovie.release_date}</p>
+              <p className="movie-details"><b>Runtime:</b>   {this.state.clickedMovie.runtime} minutes</p>
+              <p className="movie-details">
+                <b>Box Office:</b>   ${this.state.clickedMovie.revenue.toLocaleString("en-US")} US dollars
               </p>
               <p className="description">{this.state.clickedMovie.overview}</p>
             </div>

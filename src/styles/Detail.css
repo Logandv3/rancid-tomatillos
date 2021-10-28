@@ -15,6 +15,8 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  height: 95vh;
+  max-height: 100vh;
 }
 
 .poster-container {
@@ -23,11 +25,14 @@
 
 .poster-rating {
   text-align: center;
+  color: gold;
 }
 
-.detail-info {
-  width: 60%;
-  margin-right: 3%;
+.movie-details {
+  width: 50%;
+  margin-right: 5%;
+  margin-left: 2%;
+  color: rgba(243, 84, 116, 0.644);
 }
 
 .poster-img {
@@ -69,4 +74,11 @@
   background-color: #282c34;
   border: 2px solid gray;
   padding: 0.5rem auto;
+}
+
+.addToFavorites:hover,
+.addToWatchList:hover,
+.back-to-home:hover {
+  color: crimson;
+  border-color: crimson;
 }
