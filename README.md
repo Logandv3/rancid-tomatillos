@@ -6,7 +6,7 @@
 
 
 ## Deployable link
-adhesive-cent.surge.sh
+https://adhesive-cent.surge.sh
 
 
 ## Contributors
