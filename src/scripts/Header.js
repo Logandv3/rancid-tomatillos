@@ -6,22 +6,12 @@ const Header = () => {
   return (
     <header>
       <h2 className="rancid-tomatillos"> Rancid Tomatillos </h2>
-      <a
-        className="header-link"
-        href="https://frontend.turing.edu/projects/module-3/rancid-tomatillos-v3.html"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        My Watch List
-      </a>
-      <a
-        className="header-link"
-        href="https://frontend.turing.edu/projects/module-3/rancid-tomatillos-v3.html"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        My Favorites
-      </a>
+        <NavLink className="watch-link" to="/">
+          <p>My Watch List</p>
+        </NavLink>
+        <NavLink className="favs-link" to="/">
+          <p>My Favorites</p>
+        </NavLink>
       <NavLink className="login-link" to="/login">
         <p>Login</p>
       </NavLink>

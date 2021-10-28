@@ -5,7 +5,7 @@ import Detail from "./Detail";
 import Movies from "./Movies";
 import Login from "./Login";
 import "../styles/App.css";
-import { Link, Route, Switch } from "react-router-dom";
+import { NavLink, Route, Switch } from "react-router-dom";
 
 class App extends Component {
   constructor() {
@@ -53,12 +53,14 @@ class App extends Component {
                 <div className="header-container">
                   <Header />
                 </div>
-                <div className='content-container'>
-                  <Link className='feature-link' to={`/${this.state.featuredMovie.id}`} key={this.state.featuredMovie.id}>
+                {/* <div className='content-container'> */}
+                {/* <div className='content-container'> */}
+                  <NavLink className='feature-link' to={`/${this.state.featuredMovie.id}`} key={this.state.featuredMovie.id}>
                     <Feature featMov={this.state.featuredMovie} />
-                  </Link>
+                  </NavLink>
+                {/* </div> */}
                   <Movies allMovies={this.state.allMovies} />
-                </div>
+                {/* </div> */}
               </main>
             );
           }}
