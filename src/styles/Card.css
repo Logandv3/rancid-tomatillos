@@ -9,7 +9,8 @@
   width: 100%;
   height: auto;
   border-radius: 7px;
-  border: thin solid rgba(255, 255, 255, 0.424);
+  border: thin solid rgb(255, 255, 255);
+  border-style: outset;
 }
 
 .card-info {
