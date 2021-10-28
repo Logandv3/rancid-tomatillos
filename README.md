@@ -6,7 +6,7 @@
 
 
 ## Deployable link
-https://adhesive-cent.surge.sh
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f27e1741-d333-404c-937d-aa55273b16c7/deploy-status)](https://app.netlify.com/sites/logandv3-rancid-tomatillos/deploys)
 
 
 ## Contributors
