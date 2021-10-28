@@ -6,7 +6,7 @@
 
 
 ## Deployable link
-https://future-thunder.surge.sh/
+adhesive-cent.surge.sh
 
 
 ## Contributors
