@@ -1,8 +1,5 @@
 # Rancid Tomatillos
-
-
-## Project Repo
-[Rancid Tomatillos](https://github.com/lokiandfengshui/rancid-tomatillos)
+Rancid Tomatillos is an app that allows users to view all movies as well as specific movie details like the movie poster, budget, runtime, average rating etc.
 
 
 ## Deployable link
@@ -10,12 +7,6 @@ Group Contribution App: https://future-thunder.surge.sh/
 
 My Personal Version (Updates and Refactor):
 [![Netlify Status](https://api.netlify.com/api/v1/badges/f27e1741-d333-404c-937d-aa55273b16c7/deploy-status)](https://app.netlify.com/sites/logandv3-rancid-tomatillos/deploys)
-
-
-## Contributors
-
-- [Bei Zhang](https://github.com/lokiandfengshui)
-- [Logan Vincent](https://github.com/Logandv3)
 
 
 ## Technologies Used
@@ -29,6 +20,16 @@ My Personal Version (Updates and Refactor):
 * Version Control/Management: Git/Github/Github Projects
 
 
+## Original Group Project Repo
+[Rancid Tomatillos](https://github.com/lokiandfengshui/rancid-tomatillos)
+
+
+## Contributors
+
+- [Bei Zhang](https://github.com/lokiandfengshui)
+- [Logan Vincent](https://github.com/Logandv3)
+
+
 ## Setup
 
 - Fork this web app to your own Github account
@@ -36,11 +37,6 @@ My Personal Version (Updates and Refactor):
 - `cd` into the file
 - run `npm install`.
 - Run `npm start` and visit `localhost:3000`
-
-
-## Project Overview
-
-- Rancid Tomatillos is an app that allows users to view all movies as well as their individual details
 
 
 ## Learning Goals
