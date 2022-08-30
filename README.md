@@ -3,9 +3,10 @@ Rancid Tomatillos is an app that allows users to view all movies as well as spec
 
 
 ## Deployable link
-Group Contribution App: https://future-thunder.surge.sh/
 
-null-window.surge.sh
+https://logandv3.github.io/rancid-tomatillos/
+
+Group Contribution: https://future-thunder.surge.sh/
 
 
 ## Technologies Used
