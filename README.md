@@ -1,6 +1,7 @@
 # Rancid Tomatillos
 Rancid Tomatillos is an app that allows users to view all movies as well as specific movie details like the movie poster, budget, runtime, average rating etc.
 
+<img width="1438" alt="Screen Shot 2022-09-07 at 1 50 31 PM" src="https://user-images.githubusercontent.com/81990507/188964672-ad5f5d68-6d5c-4b1b-8e34-0ded07aab38b.png">
 
 ## Deployable link
 
